@@ -22,8 +22,6 @@ function ControllerModule1($scope){
       $scope.message = "Too much!";
       $scope.class = "alert alert-success";
     }
-    console.log(elements.length);
-    console.log(elements);
   }
 }
 
