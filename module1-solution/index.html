@@ -1,9 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="LunchCheck">
   <head>
     <title>Lunch Checker</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
     <style>
       .message { font-size: 1.3em; font-weight: bold; }
     </style>
@@ -11,18 +13,21 @@
 <body>
    <div class="container">
      <h1>Lunch Checker</h1>
-
-         <div class="form-group">
-             <input id="lunch-menu" type="text"
-             placeholder="list comma separated dishes you usually have for lunch"
-             class="form-control">
-         </div>
-         <div class="form-group">
-             <button class="btn btn-default">Check If Too Much</button>
-         </div>
-         <div class="form-group message">
-           <!-- Your message can go here. -->
-         </div>
+        <div ng-controller="ControllerModule1">
+            <div class="form-group">
+                <!-- I don´t consider a empty item ie: , , as an item towards to the count-->
+                <input id="lunch-menu" ng-model="lunch" type="text"
+                placeholder="list comma separated dishes you usually have for lunch"
+                class="form-control">
+            </div>
+            <div class="form-group">
+                <button ng-click="checkLunch()" class="btn btn-default">Check If Too Much</button>
+            </div>
+            <div ng-class="class" class="form-group message">
+              <!-- Your message can go here. -->
+                {{message}}
+            </div>
+        </div>
    </div>
 
 </body>
