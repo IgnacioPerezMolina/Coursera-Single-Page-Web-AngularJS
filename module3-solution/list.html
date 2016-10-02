@@ -1,0 +1,9 @@
+<ol class="list-group" ng-if='!list.showError'>
+    <li class="list-group-item" ng-repeat="item in list.items " >
+        <div> <strong>Name:</strong> {{item.name}}</div>
+        <div> <strong>Short name:</strong> {{item.short_name}}</div>
+        <div><strong>Description: </strong>{{item.description}}</div>
+        <button ng-click="list.onRemove({index: $index});">Remove Item</button>
+    </li>
+</ol>
+<div ng-if='list.showError' class='error'>Nothing found</div>
