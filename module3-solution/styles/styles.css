@@ -51,7 +51,13 @@ input[type="text"] {
         transform: rotate(360deg);
     }
 }
-
 .list-group{
     float: left;
+}
+.emptyMessage {
+    font-weight: bold;
+    color: red;
+    font-size: 1.2em;
+    float: left;
+    margin-left: 6em;
 }
